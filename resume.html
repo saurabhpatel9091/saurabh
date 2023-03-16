@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resume</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1000px;
+            margin: 50px;
+            background: #fff;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+        }
+        .container .leftside{
+            position: relative;
+            background: #0c3041;
+            padding: 40px;
+        }
+        .profile{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(77, 36, 36, 0.2);
+        }
+        .profile .image{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .profile .image img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            object-fit: cover;
+        }
+
+        .profile h2{
+            color: #b31b1b;
+            font-size: 1em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+            line-height: 1.5em;
+
+        }
+
+        .profile h2 span{
+            font-size: 0.8em;
+            font-weight: 500;
+
+        }
+        .contactinfo{
+            padding-top: 40px;
+            font-size: 0.8em
+        }
+        .title{
+            color: #b1c1c4;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .contactinfo ul{
+            position: relative;
+        }
+
+        .contactinfo ul li{
+            position: relative;
+            list-style: none;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .contactinfo ul li .icon
+        {
+            display: inline-block;
+            width: 20px;
+            font-size: 18px;
+            color: rgb(69, 7, 145);
+        }
+        .contactinfo ul li span
+        {
+            color: rgb(16, 134, 118);
+            font-weight: 300;
+        }
+        .education li{
+            margin-bottom: 15px;    
+        }
+
+        .education h5{
+            color:  rgb(255, 255, 255);
+            font-weight: 600;
+        }
+
+        .education h4{
+            color:  rgb(16, 134, 118);
+            font-weight: 300;
+        }
+
+        .education h4:nth-child(2){
+            color: #4da8bf;
+            font-weight: 600;
+        }
+
+        .languages .percent{
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background: rgb(106, 125, 15);
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .languages .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #527dc6;
+        }
+        .text{
+            color:  #b1c1c4;
+            font-weight: 400;
+        }
+        .container .rightside{
+            position: relative;
+            background: #fff;
+            padding: 40px;
+        }
+        .about{
+            margin-bottom: 20px;
+        }
+        .title2{
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        p{
+            color: #333;
+            font-size: 0.8em;
+        }
+        .box{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            
+        }
+        .about .box h4{
+            text-transform: uppercase;
+            color: #0c3041;
+        }
+        .about .box h5{
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #13426e;
+        }
+        .text p{
+            color:#003147 ;
+        }
+        .skills .box{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .skills .box .h5{
+            color: #848c99;
+        }
+        .skills .box .percent{
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background: #003147;
+        }
+        .skills .box .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;height: 100%;
+            background: #4da8bf;
+        }
+        .text p{
+            font-size: 0.8em;
+        }
+        .interest ul{
+            display: grid;
+            grid-template-columns: repeat(4 , 1fr);
+        }
+        .interest ul li{
+            list-style: none;
+            font-weight: 700;
+            color: #003147;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftside">
+                <div class="profile">
+                    <div class="image">
+                        <img src="pkpass.jpeg" alt="pkpass">
+                    </div>
+                    <h2>Saurabh sunil patel<br><span>front end developer</span></h2>
+                </div>
+                <div class="contactinfo">
+                    <h3 class="title">Contact Info</h3>
+                    <ul>
+                        <li>
+                            <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <span class="text">+91 7720897761</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <span class="text">saurabh.patel90911@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
+                            <span class="text">www.linkedin.com/saurabh patel</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <span class="text">Nashik,Maharasshtra</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contactinfo education">
+                    <h3 class="title">Education</h3>
+                    <ul>
+                        <li>
+                            <h5>2016-2017</h5>
+                            <h4>Completion Of Schooling(SSC)(73%)</h4>
+                            <h4>Bright Sparks English School</h4>
+                        </li>
+                        <li>
+                            <h5>2017-2019</h5>
+                            <h4>Completion Of (HSC)(SCI)(53%)</h4>
+                            <h4>K.K.Wagh,Nashik</h4>
+                        </li>
+                        <li>
+                            <h5>2019-2022</h5>
+                            <h4>Completion Of Undergraduate Degree(A grade)</h4>
+                            <h4>Hpt Ryk Science College,Nashik</h4>
+                        </li>
+                        <li>
+                            <h5>2022 Onwards</h5>
+                            <h4>Pursuing Full Stack Development Course</h4>
+                            <h4>Ekeeda,Mumbai</h4>
+                        </li>
+                </div>
+                <div class="languages"
+                    <h3 class="title">Languages</h3>
+                    <ul>
+                        <li>
+                             <span class="text">English</span>
+                             <span class="percent">
+                                <div style="width: 100%;"></div>
+                             </span>
+                        </li>
+                        <li>
+                            <span class="text">Hindi</span>
+                            <span class="percent">
+                                <div style="width: 100%;"></div>
+                            </span>
+                       </li>
+                       <li>
+                        <span class="text">Gujrati</span>
+                        <span class="percent">
+                            <div style="width: 100%;"></div>
+                        </span>
+                   </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="rightside">
+            <div class="about">
+                <h2 class="title2">Profile Info</h2>
+                <p>Forward-thinking graduate from Pune University with a BSE in Computer Science. Eager to join ABC Inc. to develop information systems by designing/development and implementing streamlined procedures to improve performance. Skilled in C++,Html,Css,Javascript analysis and programming as well as creating and updating design documents.  
+            </div>
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="company">
+                        <h5> • Provide support to the service desk team on network and infrastructure issues</h5>
+                        
+                    </div>
+                    <div class="company">
+                        <h5>• To provide Service Request and IMAC (Install, Move, Add and Change) services for requests
+                            logged in ServiceNow</h5>
+                        <p></p>
+                    </div>
+                    </div>
+                    
+                
+                </div>
+                <div class="skills">
+                    <h2 class="title2">Professional skills</h2>
+                    <div class="box">
+                        <h5>Team management</h5>
+                        <div class="percent">
+                            <div style="width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h5>Project Management</h5>
+                        <div class="percent">
+                            <div style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h5>Web designing</h5>
+                        <div class="percent">
+                        <div style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h5>C++</h5>
+                        <div class="percent">
+                        <div style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h5>MS-Word</h5>
+                        <div class="percent">
+                        <div style="width: 90%;">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="interest">
+                        <h2 class="title2">Hobbies</h2>
+                        <ul>
+                            <li><i class="" aria-hidden="true"></i>Gaming</li>
+                            <li><i class="" aria-hidden="true"></i>Reading Books</li>
+                            <li><i class="" aria-hidden="true"></i>Watching vlogs</li>
+                            <li><i class="" aria-hidden="true"></i>Riding bike</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>1111
